@@ -13,6 +13,9 @@ const createGrid = (sizeOfGrid) => {
     for (let j = 0; j < sizeOfGrid; j++){
       const gridBox = document.createElement('div');
       gridBox.classList.add('grid-box');
+      gridBox.addEventListener("mouseover", (event) => {
+        gridBox.style.backgroundColor = '#3a647d';
+      });
       row.appendChild(gridBox);
     }
     container.appendChild(row);
